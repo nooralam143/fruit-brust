@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- custome Style -->
     <!-- <link rel="stylesheet" href="style.css"> -->
+    <script type="text/javascript" src="timer.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -161,30 +162,30 @@
                     </div>
                 </div>
                 <!-- add overlay image -->
-                    <div class="absolute justify-between -bottom-32 left-5 right-5">
-                        <div class="flex justify-around text-center items-center w-10/12 bg-white mx-auto h-64">
-                            <div>
-                                <img src="images/fruit1.png" alt="">
-                                <p>Strawberry</p>
-                            </div>
-                            <div>
-                                <img src="images/fruit2.png" alt="">
-                                <p>Orange</p>
-                            </div>
-                            <div>
-                                <img src="images/fruit3.png" alt="">
-                                <p>Mango</p>
-                            </div>
-                            <div>
-                                <img src="images/fruit4.png" alt="">
-                                <p>Strawberry</p>
-                            </div>
-                            <div>
-                                <img src="images/fruit5.png" alt="">
-                                <p>Pomegranate</p>
-                            </div>
+                <div class="absolute justify-between -bottom-32 left-5 right-5">
+                    <div class="flex justify-around text-center items-center w-10/12 bg-white mx-auto h-64">
+                        <div>
+                            <img src="images/fruit1.png" alt="">
+                            <p>Strawberry</p>
+                        </div>
+                        <div>
+                            <img src="images/fruit2.png" alt="">
+                            <p>Orange</p>
+                        </div>
+                        <div>
+                            <img src="images/fruit3.png" alt="">
+                            <p>Mango</p>
+                        </div>
+                        <div>
+                            <img src="images/fruit4.png" alt="">
+                            <p>Strawberry</p>
+                        </div>
+                        <div>
+                            <img src="images/fruit5.png" alt="">
+                            <p>Pomegranate</p>
                         </div>
                     </div>
+                </div>
 
             </div>
         </section>
@@ -193,35 +194,176 @@
     <main class="container mx-auto mt-56">
         <!-- Deal of the day section -->
         <section>
-<h2 class="font-extrabold text-5xl color-[#121212]">Deal of the day</h2>
-<!-- countdown start -->
-<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
-    <div class="flex flex-col">
-      <span class="countdown font-mono text-5xl">
-        <span style="--value:15;"></span>
-      </span>
-      days
-    </div> 
-    <div class="flex flex-col">
-      <span class="countdown font-mono text-5xl">
-        <span style="--value:10;"></span>
-      </span>
-      hours
-    </div> 
-    <div class="flex flex-col">
-      <span class="countdown font-mono text-5xl">
-        <span style="--value:24;"></span>
-      </span>
-      min
-    </div> 
-    <div class="flex flex-col">
-      <span class="countdown font-mono text-5xl">
-        <span style="--value:37;"></span>
-      </span>
-      sec
-    </div>
-  </div>
-<!-- countdown end -->
+            <div class="flex justify-between">
+                <div>
+                    <h2 class="font-extrabold text-5xl color-[#121212] mb-6">Deal of the day</h2>
+                    <p>Contrary to popular belief, is not simply random text. It has roots in a piece of
+                        classical<br>Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <!-- countdown start -->
+                <div>
+                    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                        <div class="flex flex-col">
+                            <span id="days" class="countdown text-5xl font-extrabold text-[#121212]">
+                                <span style="--value:0;"></span>
+                            </span>
+                            days
+                        </div>
+                        <p class="text-5xl font-extrabold">:</p>
+                        <div class="flex flex-col">
+                            <span id="hours" class="countdown text-5xl font-extrabold text-[#121212]">
+                                <span style="--value:0;"></span>
+                            </span>
+                            hours
+                        </div>
+                        <p class="text-5xl font-extrabold">:</p>
+                        <div class="flex flex-col">
+                            <span id="minutes" class="countdown text-5xl font-extrabold text-[#121212]">
+                                <span style="--value:0;"></span>
+                            </span>
+                            min
+                        </div>
+                        <p class="text-5xl font-extrabold">:</p>
+                        <div class="flex flex-col">
+                            <span id="seconds" class="countdown text-5xl font-extrabold text-[#121212]">
+                                <span style="--value:0;"></span>
+                            </span>
+                            sec
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- countdown end -->
+            </div>
+            <!-- product card star -->
+            <div class="flex gap-6 flex-row mt-10">
+                <!-- Card-1 -->
+                <div class="card w-96 bg-base-100 shadow-2xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                        <div class="w-8/12 mx-auto mt-4 border-b-2">
+                            <h2 class="card-title justify-center text-center pb-6">12.90$ - 18.85$</h2>
+                        </div>
+
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Apples</h2>
+                        <!-- rating start -->
+                        <div class="rating rating-6 rating-half pt-2">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                          </div>
+                        <!-- rating end -->
+                        <div class="card-actions">
+                            <button class="text-primary-color text-lg font-bold pt-2">Details</button>
+                      </div>
+                    </div>
+                </div>
+                 <!-- Card-2 -->
+                 <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                        <div class="w-8/12 mx-auto mt-4 border-b-2">
+                            <h2 class="card-title justify-center text-center pb-6">12.90$ - 18.85$</h2>
+                        </div>
+
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Apples</h2>
+                        <!-- rating start -->
+                        <div class="rating rating-6 rating-half pt-2">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                          </div>
+                        <!-- rating end -->
+                        <div class="card-actions">
+                            <button class="text-primary-color text-lg font-bold pt-2">Details</button>
+                      </div>
+                    </div>
+                </div>
+                 <!-- Card-3 -->
+                 <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                        <div class="w-8/12 mx-auto mt-4 border-b-2">
+                            <h2 class="card-title justify-center text-center pb-6">12.90$ - 18.85$</h2>
+                        </div>
+
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Apples</h2>
+                        <!-- rating start -->
+                        <div class="rating rating-6 rating-half pt-2">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                          </div>
+                        <!-- rating end -->
+                        <div class="card-actions">
+                            <button class="text-primary-color text-lg font-bold pt-2">Details</button>
+                      </div>
+                    </div>
+                </div>
+                 <!-- Card-4 -->
+                 <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                        <div class="w-8/12 mx-auto mt-4 border-b-2">
+                            <h2 class="card-title justify-center text-center pb-6">12.90$ - 18.85$</h2>
+                        </div>
+
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Apples</h2>
+                        <!-- rating start -->
+                        <div class="rating rating-6 rating-half pt-2">
+                            <input type="radio" name="rating-10" class="rating-hidden" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-10" class="bg-primary-color mask mask-star-2 mask-half-2" />
+                          </div>
+                        <!-- rating end -->
+                        <div class="card-actions">
+                            <button class="text-primary-color text-lg font-bold pt-2">Details</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- product card End -->
         </section>
         <!-- Meet the team section -->
         <section>
