@@ -4,3 +4,17 @@
 .font-lato{
     font-family: 'Lato', sans-serif;
 }
+.circle-icon {
+    width: 3.8rem; /* Adjust the circle size */
+    height: 3.8rem;
+    border-radius: 50%;
+    background-color: rgba(18, 18, 18, 0.10);; /* Adjust the background color of the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .divider {
+    border-bottom: 1px solid #12121299; /* Adjust the color and style of the divider */
+    margin-left: 1rem; /* Adjust the spacing between heading and divider */
+  }
+  
