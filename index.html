@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Burst</title>
+    <!-- daisyUI from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- custome Style -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#F85559',
+                    }
+                }
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header>
+        <!-- Navbar section -->
+        <nav class="container mx-auto">
+            <div class="navbar bg-base-100  bg-primary-color rounded-full mt-8">
+                <div class="navbar-start">
+                    <!-- navbar mobile star -->
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                        </ul>
+                    </div>
+                    <!-- navbar mobile end -->
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1 text-white">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="h-14 flex justify-items-center">
+                    <a class="btn btn-ghost normal-case text-4xl text-white text-center"><span><img
+                                src="images/logo.png" alt=""></span>Fruit Burst</a>
+                </div>
+                <div class="navbar-end mr-6">
+                    <div class="form-control">
+                        <div class="input-group">
+                            <input type="text" placeholder="Search here" class="input input-bordered" />
+                            <button class="btn btn-square">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- bannar section -->
+        <section class="container mx-auto mt-14">
+            <div class="relative">
+                <div class="carousel w-full">
+                    <!-- slider-1 -->
+                    <div id="slide1" class="carousel-item relative w-full">
+                        <img src="images/banner1.png" class="w-full" />
+                        <!-- add text start -->
+                        <div class="overlay w-full h-full absolute top-0 left-0 bg-black opacity-60"></div>
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#fff] text-center">
+                            <h2 class="text-7xl font-extrabold">Exotic tastes at your<br>doorstep</h2>
+                            <p class="text-xl py-5">We supply highly quality organic products</p>
+                            <button class="btn border-none bg-primary-color text-white hover:bg-primary-color">Shop
+                                Now</button>
+                        </div>
+                        <!-- add text end -->
+
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" class="btn btn-circle">❮</a>
+                            <a href="#slide2" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <!-- slider-2 -->
+                    <div id="slide2" class="carousel-item relative w-full">
+                        <img src="images/banner2.png" class="w-full" />
+                        <!-- add text start -->
+                        <div class="overlay w-full h-full absolute top-0 left-0 bg-black opacity-60"></div>
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#fff] text-center">
+                            <h2 class="text-7xl font-extrabold">Exotic tastes at your<br>doorstep</h2>
+                            <p class="text-xl py-5">We supply highly quality organic products</p>
+                            <button class="btn border-none bg-primary-color text-white hover:bg-primary-color">Shop
+                                Now</button>
+                        </div>
+                        <!-- add text end -->
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" class="btn btn-circle">❮</a>
+                            <a href="#slide3" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <!-- slider-3 -->
+                    <div id="slide3" class="carousel-item relative w-full">
+                        <img src="images/banner3.png" class="w-full" />
+                        <!-- add text start -->
+                        <div class="overlay w-full h-full absolute top-0 left-0 bg-black opacity-60"></div>
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#fff] text-center">
+                            <h2 class="text-7xl font-extrabold">Exotic tastes at your<br>doorstep</h2>
+                            <p class="text-xl py-5">We supply highly quality organic products</p>
+                            <button class="btn border-none bg-primary-color text-white hover:bg-primary-color">Shop
+                                Now</button>
+                        </div>
+                        <!-- add text end -->
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" class="btn btn-circle">❮</a>
+                            <a href="#slide4" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <!-- slider-4 -->
+                    <div id="slide4" class="carousel-item relative w-full">
+                        <img src="images/banner4.png" class="w-full" />
+                        <!-- add text start -->
+                        <div class="overlay w-full h-full absolute top-0 left-0 bg-black opacity-60"></div>
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#fff] text-center">
+                            <h2 class="text-7xl font-extrabold">Exotic tastes at your<br>doorstep</h2>
+                            <p class="text-xl py-5">We supply highly quality organic products</p>
+                            <button class="btn border-none bg-primary-color text-white hover:bg-primary-color">Shop
+                                Now</button>
+                        </div>
+                        <!-- add text end -->
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide3" class="btn btn-circle">❮</a>
+                            <a href="#slide1" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- add overlay image -->
+                    <div class="absolute justify-between -bottom-32 left-5 right-5">
+                        <div class="flex justify-around text-center items-center w-10/12 bg-white mx-auto h-64">
+                            <div>
+                                <img src="images/fruit1.png" alt="">
+                                <p>Strawberry</p>
+                            </div>
+                            <div>
+                                <img src="images/fruit2.png" alt="">
+                                <p>Orange</p>
+                            </div>
+                            <div>
+                                <img src="images/fruit3.png" alt="">
+                                <p>Mango</p>
+                            </div>
+                            <div>
+                                <img src="images/fruit4.png" alt="">
+                                <p>Strawberry</p>
+                            </div>
+                            <div>
+                                <img src="images/fruit5.png" alt="">
+                                <p>Pomegranate</p>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </section>
+    </header>
+    <!-- Header End -->
+    <main class="container mx-auto mt-56">
+        <!-- Deal of the day section -->
+        <section>
+<h2 class="font-extrabold text-5xl color-[#121212]">Deal of the day</h2>
+<!-- countdown start -->
+<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+    <div class="flex flex-col">
+      <span class="countdown font-mono text-5xl">
+        <span style="--value:15;"></span>
+      </span>
+      days
+    </div> 
+    <div class="flex flex-col">
+      <span class="countdown font-mono text-5xl">
+        <span style="--value:10;"></span>
+      </span>
+      hours
+    </div> 
+    <div class="flex flex-col">
+      <span class="countdown font-mono text-5xl">
+        <span style="--value:24;"></span>
+      </span>
+      min
+    </div> 
+    <div class="flex flex-col">
+      <span class="countdown font-mono text-5xl">
+        <span style="--value:37;"></span>
+      </span>
+      sec
+    </div>
+  </div>
+<!-- countdown end -->
+        </section>
+        <!-- Meet the team section -->
+        <section>
+
+        </section>
+        <!-- Why Choose Us -->
+        <section>
+
+        </section>
+    </main>
+    <!-- footer section -->
+    <footer>
+
+    </footer>
+</body>
+
+</html>
